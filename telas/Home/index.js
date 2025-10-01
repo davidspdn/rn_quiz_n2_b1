@@ -1,12 +1,30 @@
 import { StatusBar } from 'expo-status-bar';
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
+import {getDbConnection, createTables} from '../../services/dbservice';
+
+
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
 
 
 export default function Home({ navigation, route }) {
 
     const [texto, setTexto] = useState('texto digitado na home');
+    
+    const dbCreate = createTables();
+    const dbservice = getDbConnection();
 
+   useEffect(() => {
+
+    dbCreate;
+     console.log("tabelas criadas");
+
+    dbservice;
+     console.log("Pegando conexão");
+
+   }, []);
+    console.log("tabelas criadas");
+
+  
     return (
 
         <View style={styles.container}>

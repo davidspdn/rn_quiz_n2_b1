@@ -23,9 +23,8 @@ export default function Quiz({ route, navigation }) {
 
 
             <Text style={styles.texto}>Você está na QUIZ!</Text>
-
-
             
+            <Text></Text><Text></Text>
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Home')}>
                 <Text style={styles.texto}>Voltar para a Home</Text>
             </TouchableOpacity>
