@@ -1,26 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function Cadastros({ navigation }) {
+export default function Temas({ navigation }) {
     return (
         <View style={styles.container}>
-            <Text style={styles.texto}>Você está na Cadastros !</Text>
+            <Text style={styles.texto}>Você está na Cadastros de Temas !</Text>
 
             <Text></Text><Text></Text>
             <Text style={styles.texto}>Observe que no topo desta tela tem uma seta para voltar para a tela anterior!</Text>
             <Text></Text><Text></Text>
-            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Home')}>
-                <Text style={styles.texto}>Voltar para a Home</Text>
-            </TouchableOpacity>
-
-             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Perguntas')}>
-                <Text style={styles.texto}>Perguntas</Text>
-            </TouchableOpacity>
-
-
-
-            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Temas')}>
-                <Text style={styles.texto}>Temas</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastros')}>
+                <Text style={styles.texto}>Voltar para a tela Cadastros</Text>
             </TouchableOpacity>
 
             <StatusBar style="auto" />

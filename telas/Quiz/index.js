@@ -5,7 +5,7 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 export default function Quiz({ route, navigation }) {
 
     useEffect(() => {
-        console.log('exibindo a tela 1');
+        console.log('exibindo a tela QUIZ');
 
         return () => {
             console.log('saindo da tela');
@@ -22,8 +22,10 @@ export default function Quiz({ route, navigation }) {
             </Text>
 
 
-            <Text style={styles.texto}>Você está na Tela 1!</Text>
-            <Text></Text><Text></Text>
+            <Text style={styles.texto}>Você está na QUIZ!</Text>
+
+
+            
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Home')}>
                 <Text style={styles.texto}>Voltar para a Home</Text>
             </TouchableOpacity>

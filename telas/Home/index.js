@@ -23,21 +23,21 @@ export default function Home({ navigation, route }) {
             <Text> {texto}</Text>
 
 
-            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Tela1', { parametroTexto: texto })}>
-                <Text style={styles.texto}>Tela 1</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastros', { parametroTexto: texto })}>
+                <Text style={styles.texto}>Cadastros</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Tela2')}>
-                <Text style={styles.texto}>Tela 2</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Quiz')}>
+                <Text style={styles.texto}>Quiz</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Tela3')}>
-                <Text style={styles.texto}>Tela 3</Text>
+            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Resumo')}>
+                <Text style={styles.texto}>Resumo</Text>
             </TouchableOpacity>
 
 
             <Text style={styles.texto}>
-                Este texto veio da tela 3:
+                Este texto veio da tela Resumo:
                 {route.params?.parametroTextoTela3}
             </Text>
 
