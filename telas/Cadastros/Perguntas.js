@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React,{use, useState, useEffect } from "react";
-import { StyleSheet, Text, View, TouchableOpacity ,TextInput,ScrollView} from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity ,TextInput,ScrollView,Alert} from 'react-native';
 import {getDbConnection, createTables} from '../../services/dbservice';
+import styles from './stylesPeguntas';
+import { Dropdown } from 'react-native-element-dropdown';
 
 
 export default function Perguntas({ navigation }) {
@@ -11,71 +13,78 @@ export default function Perguntas({ navigation }) {
     const [resposta2, setResposta2] = useState("");
     const [resposta3, setResposta3] = useState("");
     const [respostaCorreta, setRespostaCorreta] = useState("");
+    const dataExTemas = [
+    { label: 'Item 1', value: '1' },
+    { label: 'Item 2', value: '2' },
+    { label: 'Item 3', value: '3' },
+    { label: 'Item 4', value: '4' },
+    { label: 'Item 5', value: '5' },
+    { label: 'Item 6', value: '6' },
+    { label: 'Item 7', value: '7' },
+    { label: 'Item 8', value: '8' },
+  ];
 
     return (
-        <View style={styles.container}>
-            <Text style={styles.texto}>Você está na Cadastros de Perguntas !</Text>
-
+        <View style={styles.container}>           
 
             <Text></Text><Text></Text>
-            <Text style={styles.texto}>Observe que no topo desta tela tem uma seta para voltar para a tela anterior!</Text>
+            <Text style={styles.titulo}>Cadastro de Perguntas</Text>
+             <Text></Text><Text></Text>
+            <Dropdown
+                style={[styles.campoEdicao, styles.sombra]}
+                data={dataExTemas}
+                labelField="label"
+                valueField="value"
+                placeholder="Selecione o tema"
+                value={tema}
+                onChange={item => {
+                    setTema(item.value);
+                }}
+            />
+    
 
-            <TextInput
-            style={styles.campoEdicao}
-            placeholder="Digite o tema da pergunta"
-            value={tema}
-            onChangeText={(valor) => setTema(valor)}             
-            />
-            <TextInput
-            style={styles.campoEdicao}
-            placeholder="Digite a pergunta"
-            value={tema}
-            onChangeText={(valor) => setTema(valor)}             
-            />
+
+             <Text></Text><Text></Text>
 
              <TextInput
-            style={styles.campoEdicao}
+            style={[styles.campoEdicao, styles.sombra]}
             placeholder="Digite a Resposta 1"
-            value={tema}
+            value={resposta1}
             onChangeText={(valor) => setResposta1(valor)}             
             />
+             <Text></Text><Text></Text>
             <TextInput
-            style={styles.campoEdicao}
+            style={[styles.campoEdicao, styles.sombra]}
             placeholder="Digite a Resposta 2"
-            value={tema}
+            value={resposta2}
             onChangeText={(valor) => setResposta2(valor)}             
             />
-
+             <Text></Text><Text></Text>
             <TextInput
-            style={styles.campoEdicao}
+            style={[styles.campoEdicao, styles.sombra]}
             placeholder="Digite a Resposta 3"
-            value={tema}
+            value={resposta3}
             onChangeText={(valor) => setResposta3(valor)}             
             />
-
+             <Text></Text><Text></Text>
             <TextInput
-            style={styles.campoEdicao}
+            style={[styles.campoEdicao, styles.sombra]}
             placeholder="Digite a Resposta Correta"
-            value={tema}
+            value={respostaCorreta}
             onChangeText={(valor) => setRespostaCorreta(valor)}             
-            />
-
-
-
-            
-           
-
-
+            /> 
+            <Text></Text><Text></Text>
+                      
 
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastros')}>
-                <Text style={styles.texto}>Voltar para a tela Cadastros</Text>
+                <Text style={styles.texto}>Cadastrar</Text>
             </TouchableOpacity>
 
             <StatusBar style="auto" />
         </View>
     );
 }
-
+/*
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -98,3 +107,4 @@ const styles = StyleSheet.create({
 
     }
 });
+*/

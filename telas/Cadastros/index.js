@@ -1,30 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-
+import styles from './stylesPeguntas';
 export default function Cadastros({ navigation }) {
     return (
         <View style={styles.container}>
-                <Text style={styles.texto}>Você está na Cadastros !</Text>
+                <Text style={styles.titulo}>Cadastros</Text>
 
                 <Text></Text><Text></Text>
-                <Text style={styles.texto}>Observe que no topo desta tela tem uma seta para voltar para a tela anterior!</Text>
+                <Text style={styles.texto}>Cadastre os temas e as perguntas do jogo, caso a pergunta não tenha um tema já criado, crie primeiramente o tema e depois quando cadastrar a pergunta, selecione o tema</Text>
                 <Text></Text><Text></Text>
-                <View style={styles.botoesContainer}>
-                    <TouchableOpacity style={[styles.botao, styles.voltarBotao]} onPress={() => navigation.navigate('Home')}>
-                        <Text style={styles.texto}>Voltar para a Home</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Perguntas')}>
-                        <Text style={styles.texto}>Perguntas</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Temas')}>
+
+
+                <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Temas')}>
                         <Text style={styles.texto}>Temas</Text>
                     </TouchableOpacity>
-                </View>
+                    <Text></Text><Text></Text>
+                    <Text></Text><Text></Text>
+
+
+
+                <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Perguntas')}>
+                        <Text style={styles.texto}>Perguntas</Text>
+                    </TouchableOpacity>
+                    <Text></Text><Text></Text>
+                    <Text></Text><Text></Text>
+
+
+                    
                 <StatusBar style="auto" />
         </View>
     );
 }
-
+/*
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -57,3 +64,4 @@ const styles = StyleSheet.create({
         marginTop: 40,
     }
 });
+*/

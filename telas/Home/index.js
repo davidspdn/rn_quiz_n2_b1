@@ -1,7 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { use, useEffect, useState } from 'react';
 import {getDbConnection, createTables} from '../../services/dbservice';
-
+import styles from './stylesHome';
 
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
 
@@ -28,7 +28,7 @@ export default function Home({ navigation, route }) {
     return (
 
         <View style={styles.container}>
-            <Text style={styles.texto}>Você está na Home</Text>
+            <Text style={styles.titulo}>Quiz</Text>
             <Text></Text><Text></Text>
 
             <Text style={styles.textoPequeno}>Digite algo para enviar para a Tela 1</Text>
@@ -44,10 +44,14 @@ export default function Home({ navigation, route }) {
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastros', { parametroTexto: texto })}>
                 <Text style={styles.texto}>Cadastros</Text>
             </TouchableOpacity>
+             <Text></Text><Text></Text>
+              <Text></Text><Text></Text>
 
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Quiz')}>
                 <Text style={styles.texto}>Quiz</Text>
             </TouchableOpacity>
+             <Text></Text><Text></Text>
+              <Text></Text><Text></Text>
 
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Resumo')}>
                 <Text style={styles.texto}>Resumo</Text>
@@ -63,7 +67,7 @@ export default function Home({ navigation, route }) {
         </View>
     );
 }
-
+/*
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -99,3 +103,5 @@ const styles = StyleSheet.create({
 
     }
 });
+
+*/

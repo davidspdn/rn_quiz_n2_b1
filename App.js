@@ -28,9 +28,9 @@ export default function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} options={{ headerBackVisible: false,  }} />
         <Stack.Screen name="Quiz" component={Quiz} options={{ headerBackVisible: false, headerShown: false }} />
-        <Stack.Screen name="Cadastros" component={Cadastros} options={{ headerBackVisible: true , animation: 'slide_from_bottom'}} />
-        <Stack.Screen name="Temas" component={Temas} options={{ headerBackVisible: true , title: 'Cadastros de Temas', animation: 'slide_from_right'}} /> 
-        <Stack.Screen name="Perguntas" component={Perguntas} options={{ headerBackVisible: true , title: 'Cadastros de Perguntas', animation: 'slide_from_right'}} />
+  <Stack.Screen name="Cadastros" component={Cadastros} options={{ headerBackVisible: true , animation: 'slide_from_bottom', headerStyle: { paddingTop: 40 } }} />
+  <Stack.Screen name="Temas" component={Temas} options={{ headerBackVisible: true , title: 'Cadastros de Temas', animation: 'slide_from_right', headerStyle: { paddingTop: 70 } }} /> 
+  <Stack.Screen name="Perguntas" component={Perguntas} options={{ headerBackVisible: true , title: 'Cadastros de Perguntas', animation: 'slide_from_right', headerStyle: { paddingTop: 40 } }} />
         <Stack.Screen name="Resumo" component={Resumo} options={{ headerBackVisible: false, headerBackTitleVisible: false, title: 'Esta é tela 3', animation: 'fade' }} />
 
       </Stack.Navigator>
