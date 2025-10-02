@@ -6,6 +6,12 @@ import styles from './stylesQuiz';
 import { Dropdown } from 'react-native-element-dropdown';
 
 
+/* TODO:
+Reaproveitar tela para as próximas perguntas do quiz,
+basta clicar em próximo e ir atualizando as perguntas e respostas
+até o final do quiz, depois direcionar para a tela de resumo */
+
+
 export default function Jogo({ navigation }) {
     const [tema, setTema] = useState("");
     const [pergunta, setPergunta] = useState("");

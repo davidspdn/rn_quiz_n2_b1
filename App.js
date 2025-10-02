@@ -7,6 +7,7 @@ import Cadastros from './telas/Cadastros';
 import Resumo from './telas/Resumo';
 import Temas from './telas/Cadastros/Temas';
 import Perguntas from './telas/Cadastros/Perguntas';
+import Editar from './telas/Cadastros/Editar';
 import Jogo from './telas/Quiz/Jogo'; 
 
 /* Help:
@@ -32,8 +33,9 @@ export default function App() {
         <Stack.Screen name="Cadastros" component={Cadastros} options={{ headerBackVisible: true , animation: 'slide_from_bottom'}} />
         <Stack.Screen name="Temas" component={Temas} options={{ headerBackVisible: true , title: 'Cadastros de Temas', animation: 'slide_from_right',}} /> 
         <Stack.Screen name="Perguntas" component={Perguntas} options={{ headerBackVisible: true , title: 'Cadastros de Perguntas', animation: 'slide_from_right'}} />
-        <Stack.Screen name="Resumo" component={Resumo} options={{ headerBackVisible: true, headerBackTitleVisible: true, title: 'Resumo', animation: 'fade' }} />
+        <Stack.Screen name="Resumo" component={Resumo} options={{ headerBackVisible: true, headerBackTitleVisible: true, title: 'Resumo', animation: 'slide_from_right' }} />
         <Stack.Screen name="Jogo" component={Jogo} options={{ headerBackVisible: true, headerBackTitleVisible: true, title: 'Jogo Quiz', animation: 'fade' }} />
+        <Stack.Screen name="Editar" component={Editar} options={{ headerBackVisible: true, headerBackTitleVisible: true, title: 'Editar', animation: 'fade' }} />
 
       </Stack.Navigator>
     </NavigationContainer>

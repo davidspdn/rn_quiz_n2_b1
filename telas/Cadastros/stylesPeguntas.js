@@ -76,35 +76,35 @@ const styles = StyleSheet.create({
      texto: {
         fontSize: 30,
         textAlign: 'center'
-     }
+     },
 
-  
+     perguntaBox: {
+        marginBottom: 16,
+        backgroundColor:'#eef',
+        borderRadius:10,
+        padding:10,
+        width:'90%',
+        alignSelf:'center',
+    },
+    perguntaTitulo: {
+        fontSize:18,
+    },
+    respostaCorreta: {
+        fontSize:16,
+        fontWeight:'bold',
+        color:'#1a7',
+    },
+    respostaUsuario: {
+        fontSize:16,
+        fontWeight:'bold',
+    },
+    respostaUsuarioAcerto: {
+        color:'#1a7',
+    },
+    respostaUsuarioErro: {
+        color:'#a11',
+    },
 
-/*
-    dropdown: {
-      margin: 16,
-      height: 50,
-      borderBottomColor: 'gray',
-      borderBottomWidth: 0.5,
-    },
-    icon: {
-      marginRight: 5,
-    },
-    placeholderStyle: {
-      fontSize: 16,
-    },
-    selectedTextStyle: {
-      fontSize: 16,
-    },
-    iconStyle: {
-      width: 20,
-      height: 20,
-    },
-    inputSearchStyle: {
-      height: 40,
-      fontSize: 16,
-    },
-*/
 });
 
 

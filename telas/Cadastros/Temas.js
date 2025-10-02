@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React,{use, useState, useEffect } from "react";
 import { StyleSheet, Text, View, TouchableOpacity ,TextInput,ScrollView,Alert} from 'react-native';
 import {getDbConnection, createTables} from '../../services/dbservice';
+import {adicionaTema} from '../../services/temasService';
 import styles from './stylesPeguntas';
 import { Dropdown } from 'react-native-element-dropdown';
 
@@ -32,19 +33,19 @@ export default function Temas({ navigation }) {
             style={[styles.campoEdicao, styles.sombra]}
             placeholder="Digite o Titulo do Tema"
             value={tituloTema}
-            onChangeText={(valor) => setResposta1(valor)}             
+            onChangeText={(valor) => setTituloTema(valor)}             
             />
              <Text></Text><Text></Text>
             <TextInput
             style={[styles.campoEdicao, styles.sombra]}
             placeholder="Digite a descrição do Tema"
             value={descricaoTema}
-            onChangeText={(valor) => setResposta2(valor)}             
+            onChangeText={(valor) => setDescricao(valor)}             
             />
              <Text></Text><Text></Text>
                                   
 
-            <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastros')}>
+            <TouchableOpacity style={styles.botao} onPress={adicionaTema(tituloTema)}>
                 <Text style={styles.texto}>Cadastrar</Text>
             </TouchableOpacity>
 
@@ -52,27 +53,3 @@ export default function Temas({ navigation }) {
         </View>
     );
 }
-/*
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-    texto: {
-        fontSize: 30,
-        textAlign: 'center'
-    },
-    botao: {
-        width: "90%",
-        height: 70,
-        borderColor: '#000',
-        borderWidth: 2,
-        borderRadius: 20,
-        alignItems: 'center',
-        justifyContent: 'center',
-
-    }
-});
-*/
