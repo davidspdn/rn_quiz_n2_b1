@@ -12,10 +12,11 @@ const styles = StyleSheet.create({
         justifyContent: 'flex-start',
         marginTop: 0,
     },
-
     titulo: {
         fontSize: 30,
         color: '#8a1a1aff',
+        marginBottom: 30,
+        marginTop: 50,
         fontWeight: 'bold',
     },
 
@@ -71,11 +72,42 @@ const styles = StyleSheet.create({
         borderRadius: 20,
         alignItems: 'center',
         justifyContent: 'center',
-
+        marginBottom: 20,
     },
      texto: {
         fontSize: 30,
         textAlign: 'center'
+     },
+     
+     dadosInfo: {
+        backgroundColor: '#f0f0f0',
+        padding: 10,
+        borderRadius: 10,
+        marginBottom: 20,
+        width: '90%',
+        alignItems: 'center',
+     },
+     
+     dadosTexto: {
+        fontSize: 14,
+        color: '#666',
+        textAlign: 'center',
+     },
+     
+     botaoMockado: {
+        backgroundColor: '#ff9800',
+        borderColor: '#e65100',
+     },
+     
+     textoMockado: {
+        fontSize: 18,
+        color: '#fff',
+        fontWeight: 'bold',
+     },
+     
+     botaoDisabled: {
+        backgroundColor: '#ccc',
+        borderColor: '#999',
      }
 
   
