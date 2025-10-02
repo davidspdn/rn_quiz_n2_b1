@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { use, useEffect, useState } from 'react';
-import {getDbConnection, createTables} from '../../services/dbservice';
+import { getDbConnection, createTables } from '../../services/dbservice';
 import styles from './stylesHome';
 
 import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-native';
@@ -9,60 +9,51 @@ import { StyleSheet, Text, View, TouchableOpacity, TextInput } from 'react-nativ
 export default function Home({ navigation, route }) {
 
     const [texto, setTexto] = useState('texto digitado na home');
-    
+
     const dbCreate = createTables();
     const dbservice = getDbConnection();
 
-   useEffect(() => {
+    useEffect(() => {
 
-    dbCreate;
-     console.log("tabelas criadas");
+        dbCreate;
+        console.log("tabelas criadas");
 
-    dbservice;
-     console.log("Pegando conexão");
+        dbservice;
+        console.log("Pegando conexão");
 
-   }, []);
+    }, []);
     console.log("tabelas criadas");
 
-  
+
     return (
 
         <View style={styles.container}>
             <Text style={styles.titulo}>Quiz</Text>
             <Text></Text><Text></Text>
+         
+          
 
-            <Text style={styles.textoPequeno}>Digite algo para enviar para a Tela 1</Text>
-            <TextInput
-                onChangeText={(valor) => setTexto(valor)}
-                style={styles.caixaTexto}
-                value={texto}
-            />
-
-            <Text> {texto}</Text>
+            
 
 
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Cadastros', { parametroTexto: texto })}>
                 <Text style={styles.texto}>Cadastros</Text>
             </TouchableOpacity>
-             <Text></Text><Text></Text>
-              <Text></Text><Text></Text>
+            <Text></Text><Text></Text>
+            <Text></Text><Text></Text>
 
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Quiz')}>
                 <Text style={styles.texto}>Quiz</Text>
             </TouchableOpacity>
-             <Text></Text><Text></Text>
-              <Text></Text><Text></Text>
+            <Text></Text><Text></Text>
+            <Text></Text><Text></Text>
 
             <TouchableOpacity style={styles.botao} onPress={() => navigation.navigate('Resumo')}>
                 <Text style={styles.texto}>Resumo</Text>
             </TouchableOpacity>
 
 
-            <Text style={styles.texto}>
-                Este texto veio da tela Resumo:
-                {route.params?.parametroTextoTela3}
-            </Text>
-
+            
             <StatusBar style="auto" />
         </View>
     );

@@ -41,6 +41,21 @@ export default function Perguntas({ navigation }) {
                     setTema(item.value);
                 }}
             />
+             <Text></Text><Text></Text>
+
+            <TextInput
+            style={[styles.campoEdicao, styles.sombra]}
+            placeholder="Digite a Pergunta"
+            value={resposta1}
+            onChangeText={(valor) => setResposta1(valor)}             
+            />
+             <Text></Text><Text></Text>
+            <TextInput
+            style={[styles.campoEdicao, styles.sombra]}
+            placeholder="Digite a Resposta Correta"
+            value={respostaCorreta}
+            onChangeText={(valor) => setRespostaCorreta(valor)}             
+            /> 
     
 
 
@@ -67,12 +82,7 @@ export default function Perguntas({ navigation }) {
             onChangeText={(valor) => setResposta3(valor)}             
             />
              <Text></Text><Text></Text>
-            <TextInput
-            style={[styles.campoEdicao, styles.sombra]}
-            placeholder="Digite a Resposta Correta"
-            value={respostaCorreta}
-            onChangeText={(valor) => setRespostaCorreta(valor)}             
-            /> 
+            
             <Text></Text><Text></Text>
                       
 
